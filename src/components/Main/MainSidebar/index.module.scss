@@ -1,0 +1,39 @@
+@import "../../../styles/breakpoints.module.scss";
+
+.mainSidebar {
+  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
+  list-style: none;
+  width: 250px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: hidden auto;
+  scroll-behavior: smooth;
+
+  @include respond-to(md) {
+    display: none;
+  }
+
+  &__item {
+    border-radius: 4px;
+    line-height: 40px;
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+    transition: 0.2s opacity;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &Label {
+      width: 40px;
+    }
+
+    &Content {
+    }
+  }
+}
