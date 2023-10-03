@@ -1,0 +1,16 @@
+.mainContent03Button {
+  padding: 0 10px;
+  min-width: 50px;
+  background-color: #22c55e;
+  color: #fff;
+  font-weight: bold;
+  line-height: 50px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s background-color;
+
+  &:hover {
+    background-color: #15803d;
+  }
+}

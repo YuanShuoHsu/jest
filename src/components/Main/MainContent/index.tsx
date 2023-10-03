@@ -1,5 +1,27 @@
+import { lazy, Suspense } from "react";
+import { useSelector } from "react-redux";
+import { RootState } from "../../../store";
+
 import styles from "./index.module.scss";
 
+const componentMap: {
+  [key: string]: React.LazyExoticComponent<() => JSX.Element>;
+} = {
+  "01": lazy(() => import("./MainContent01")),
+  "01-1": lazy(() => import("./MainContent01_1")),
+  "02": lazy(() => import("./MainContent02")),
+  "03": lazy(() => import("./MainContent03")),
+};
+
 export default function MainContent() {
-  return <div className={styles.mainContent}>MainContent</div>;
+  const sidebar = useSelector((state: RootState) => state.sidebar.value);
+  const LazyComponent = componentMap[sidebar];
+
+  return (
+    <div className={styles.mainContent}>
+      <Suspense fallback={<div>Loading...</div>}>
+        {LazyComponent && <LazyComponent />}
+      </Suspense>
+    </div>
+  );
 }

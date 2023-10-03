@@ -1,0 +1,19 @@
+.mainContentTemplate {
+  padding: 20px;
+
+  &__title {
+  }
+
+  &__list {
+    &Item {
+      color: #333333;
+      font-size: 18px;
+      line-height: 40px;
+
+      .mainContentTemplate__subList {
+        &Item {
+        }
+      }
+    }
+  }
+}
