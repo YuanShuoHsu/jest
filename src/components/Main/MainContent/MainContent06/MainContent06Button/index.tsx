@@ -1,22 +1,35 @@
-import styled from "styled-components";
+import styles from "./index.module.scss";
 
-const StyledButton = styled.button`
-  padding: 0 10px;
-  min-width: 50px;
-  height: 50px;
-  background-color: #fff;
-  color: #ffac27;
-  font-weight: bold;
-  border-radius: 4px;
-  border: 2px solid #ffac27;
-  cursor: pointer;
-  transition: 0.2s opacity;
+type ButtonType = "A" | "B" | "C";
 
-  &:hover {
-    opacity: 0.8;
-  }
-`;
+interface MainContent06ButtonProps {
+  type: ButtonType | string;
+}
 
-export default function MainContent06Button() {
-  return <StyledButton>Hi</StyledButton>;
+export default function MainContent06Button({
+  type,
+}: MainContent06ButtonProps) {
+  const getCls = (type: ButtonType | string) => {
+    const typeACls = "#22c55e";
+
+    switch (type) {
+      case "A":
+        return typeACls;
+      case "B":
+        return "#3b82f6";
+      case "C":
+        return "#ef4444";
+      default:
+        return "#22c55e";
+    }
+  };
+
+  return (
+    <button
+      style={{ backgroundColor: getCls(type) }}
+      className={styles.mainContent06Button}
+    >
+      Hi
+    </button>
+  );
 }

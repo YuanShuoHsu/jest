@@ -38,7 +38,13 @@ export default function MainContent06() {
         link: "https://www.ibm.com/docs/en/engineering-lifecycle-management-suite/lifecycle-management/7.0.0?topic=scripts-test-cases-test-suites",
       },
     ],
-    buttonComponent: <MainContent06Button />,
+    buttonComponent: (
+      <div style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
+        <MainContent06Button type={"A"} />
+        <MainContent06Button type={"B"} />
+        <MainContent06Button type={"C"} />
+      </div>
+    ),
   };
 
   return (
