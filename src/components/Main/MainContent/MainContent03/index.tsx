@@ -3,23 +3,25 @@ import MainContent03Button from "./MainContent03Button";
 
 import styles from "./index.module.scss";
 
-export default function MainContent02() {
-  const onClick = () => {};
+export default function MainContent03() {
+  const onClick = () => {
+    alert("HI");
+  };
 
   const data = {
     titles: ["03", "測什麼", "知識點", "參考/延伸閱讀"],
     lists: [
       {
-        title: "jest.fn()",
+        item: "jest.fn()",
       },
       {
-        title: "fireEvent",
+        item: "fireEvent",
       },
       {
-        title: "userEvent",
+        item: "userEvent",
       },
       {
-        title: "toHaveBeenCalledTimes",
+        item: "toHaveBeenCalledTimes",
       },
     ],
     referenceItems: [
@@ -41,7 +43,7 @@ export default function MainContent02() {
 
   return (
     <div className={styles.mainContent03}>
-      <MainContentTemplate data={data} />;
+      <MainContentTemplate data={data} />
     </div>
   );
 }

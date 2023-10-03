@@ -8,7 +8,7 @@ export default function MainContent02() {
     titles: ["02", "測什麼", "知識點", "參考/延伸閱讀"],
     lists: [
       {
-        title: "測試範本",
+        item: "測試範本",
         subItems: ["準備環境/執行/驗證", "AAA (Arrange-Act-Assert) pattern"],
       },
     ],
@@ -23,7 +23,7 @@ export default function MainContent02() {
 
   return (
     <div className={styles.mainContent02}>
-      <MainContentTemplate data={data} />;
+      <MainContentTemplate data={data} />
     </div>
   );
 }

@@ -8,11 +8,11 @@ export default function MainContent01() {
     titles: ["01", "測什麼", "知識點", "參考/延伸閱讀"],
     lists: [
       {
-        title: "@testing-library/react",
+        item: "@testing-library/react",
         subItems: ["render", "screen", "screen.debug", "screen.getByRole"],
       },
       {
-        title: "@testing-library/jest-dom",
+        item: "@testing-library/jest-dom",
         subItems: ["toHaveTextContent", "regex", "toBeInTheDocument"],
       },
     ],

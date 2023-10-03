@@ -8,7 +8,7 @@ export default function MainContent01_1() {
     titles: ["01-1", "測什麼", "知識點", "參考/延伸閱讀"],
     lists: [
       {
-        title: "jest",
+        item: "jest",
         subItems: ["toMatchSnapshot", "toMatchInlineSnapshot"],
       },
     ],
@@ -23,7 +23,7 @@ export default function MainContent01_1() {
 
   return (
     <div className={styles.mainContent01_1}>
-      <MainContentTemplate data={data} />;
+      <MainContentTemplate data={data} />
     </div>
   );
 }

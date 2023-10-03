@@ -3,7 +3,7 @@ import styles from "./index.module.scss";
 
 interface MainContentData {
   titles: string[];
-  lists: { title: string; subItems?: string[] }[];
+  lists: { item: string; subItems?: string[] }[];
   referenceItems: { label: string; link: string }[];
   buttonComponent: React.ReactNode;
 }
@@ -22,7 +22,7 @@ export default function MainContentTemplate({ data }: MainContentProps) {
       <ul className={styles.mainContentTemplate__list}>
         {data.lists.map((list, index) => (
           <li key={index} className={styles.mainContentTemplate__listItem}>
-            {list.title}
+            {list.item}
             <ul className={styles.mainContentTemplate__subList}>
               {list.subItems?.map((subItem, subIndex) => (
                 <li
