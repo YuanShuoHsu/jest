@@ -1,6 +1,10 @@
 import styles from "./index.module.scss";
 
-type ButtonType = "A" | "B" | "C";
+export enum ButtonType {
+  A = "A",
+  B = "B",
+  C = "C",
+}
 
 interface MainContent06ButtonProps {
   type: ButtonType | string;
@@ -13,11 +17,11 @@ export default function MainContent06Button({
     const typeACls = "#22c55e";
 
     switch (type) {
-      case "A":
+      case ButtonType.A:
         return typeACls;
-      case "B":
+      case ButtonType.B:
         return "#3b82f6";
-      case "C":
+      case ButtonType.C:
         return "#ef4444";
       default:
         return "#22c55e";

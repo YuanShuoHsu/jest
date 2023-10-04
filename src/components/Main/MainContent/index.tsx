@@ -14,6 +14,7 @@ const componentMap: {
   "04": lazy(() => import("./MainContent04")),
   "05": lazy(() => import("./MainContent05")),
   "06": lazy(() => import("./MainContent06")),
+  "07": lazy(() => import("./MainContent07")),
 };
 
 export default function MainContent() {
