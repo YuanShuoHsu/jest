@@ -1,6 +1,6 @@
 import { screen, render } from "@testing-library/react";
 import { renderHook, act } from "@testing-library/react-hooks";
-import Demo from "../../exercise/09";
+import Demo from "../components/Main/MainContent/MainContent09/MainContent09Button";
 
 jest.mock("../../exercise/09/Trade", () => () => "FakeTradeComponent");
 
