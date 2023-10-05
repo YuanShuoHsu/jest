@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button displays hi 2`] = `
+<div>
+  <button
+    class="mainContent01_1Button"
+  >
+    Hi
+  </button>
+</div>
+`;

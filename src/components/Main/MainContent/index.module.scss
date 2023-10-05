@@ -1,0 +1,7 @@
+@import "../../../styles/breakpoints.module.scss";
+
+.mainContent {
+  flex: 1;
+  overflow: hidden auto;
+  scroll-behavior: smooth;
+}
